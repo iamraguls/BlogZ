@@ -1,0 +1,86 @@
+/* #blog-container{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background-color: blueviolet;
+}
+
+#blog-img-cont{
+    width: 400px;
+    height: 300px;
+}
+#blog-img-cont img{
+    width: 100%;
+    object-fit: cover;
+} */
+
+#blog-container {
+  margin-top: 20px;
+    display: flex;
+    justify-content: space-between; /* Space between the image and text */
+    align-items: center; /* Vertically align items to the center */
+    background-color: red;
+    padding: 1rem; /* Add spacing inside the container */
+    z-index: -1;
+    position: relative;
+    cursor: pointer;
+  }
+
+  #blog-img-cont {
+    max-width: 400px;
+    height: 300px;
+    width: 100%;
+    background-color: red;
+  }
+  #blog-img-cont img:hover{
+    scale: 1;
+  }
+
+  #blog-img-cont img {
+    width: 100%; /* Fill the container width */
+    height: 100%; /* Fill the container height */
+    object-fit: cover; /* Crop the image to fit */
+    overflow: hidden;
+    scale: 0.95;
+    transition: 0.4s;
+  }
+
+  #blog-text {
+    flex: 1; /* Take up remaining space */
+    padding: 0 1rem; /* Add padding around the text */
+    color: white;
+    overflow: hidden;
+  }
+
+@media(max-width: 768px){
+  
+    #blog-container{
+        flex-direction: column;
+    }
+    #blog-text {
+      color: white;
+      font-size: 0.9rem;
+      overflow: hidden;
+    }
+    #blog-text h1{
+      font-size: 1.5rem;
+    }
+}
+
+@media(max-width: 375px){
+  
+  #blog-text {
+    color: white;
+    font-size: 0.8rem;
+    overflow: hidden;
+  }
+  #blog-text h1{
+    font-size: 1.2rem;
+  }
+  #blog-img-cont {
+    
+    height: 250px;
+  
+  }
+  
+}
